@@ -102,7 +102,19 @@ int main(){
   }  
 }
 ```
->  Tarefa 2 - Altere o código anterior para mostrar a frase "esse é o valor escolhido" quando a variável "parada" for igual a 9. Copie e cole o código aqui e realize o commit.
+>  Tarefa 2 - Altere o código anterior para mostrar a frase "esse é o valor escolhido" quando a variável "parada" for igual a 9. Copie e cole o código aqui e realize o commit.#include<stdio.h>
+int main(){
+  int parada = 0;
+  while (parada <=20){    
+    printf("\n O valor da parada agora: %d",parada);
+    parada++;
+     if (parada==9){  
+	     printf("\n esse e o valor escolhido:%d",parada);  
+	            }
+  }
+   return 0 ;
+}
+   
 
 ## Revisando Laços de Repetição: Do
 #### Agora iremos finalizar nosso último laço de repetição. Iremos usar o do.
