@@ -78,7 +78,7 @@ int main(){
   }
 }
 ```
->  Tarefa 01 - Altere o código e execute-o no falcon++ para que ele imprime todos os números entre 20 e 40. Após conseguir, basta copiar as linhas de código e colar aqui e realize o commit.´´´´ #include<stdio.h>
+>  Tarefa 01 - Altere o código e execute-o no falcon++ para que ele imprime todos os números entre 20 e 40. Após conseguir, basta copiar as linhas de código e colar aqui e realize o commit.```#include<stdio.h>
 int main(){
 	for(int i=20; i<41;i++){
     printf("\nEsse é o valor de i: %d",i);
@@ -103,7 +103,7 @@ int main(){
 }
 ```
 >  Tarefa 2 - Altere o código anterior para mostrar a frase "esse é o valor escolhido" quando a variável "parada" for igual a 9. Copie e cole o código aqui e realize o commit.
-> ´´´´#include<stdio.h>
+> ```#include<stdio.h>
 int main(){
   int parada = 0;
   while (parada <=20){    
@@ -139,10 +139,10 @@ int main(){
   }while(incremento != 99);// com essa condição, o laço do..while só irá parar quando ele digitar 99.
 }
 ```
->  Tarefa 3 - Altera o código para que quando seja escolhido 1, seja escrito "você escolheu cafe da manhã". Quando 2, seja escrito "você escolheu almoço". Quando 3, seja escrito "você escolheu agora jantar". Copie o código aqui e realize o commit.int main(){
+>  Tarefa 3 - Altera o código para que quando seja escolhido 1, seja escrito "você escolheu cafe da manhã". Quando 2, seja escrito "você escolheu almoço". Quando 3, seja escrito "você escolheu agora jantar". Copie o código aqui e realize o commit.```int main(){
   int incremento = 0;
   do{
-   ´´´ printf("\n############# CARDAPIO VIRTUAL ##############");
+    printf("\n############# CARDAPIO VIRTUAL ##############");
     printf("\n[1]-Cafe da manha");
     printf("\n[2]-Almoco");
     printf("\n[3]-Janta");
