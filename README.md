@@ -4,8 +4,91 @@
 # Funções em C
 
 >	Declare funções. Uma com opção de menu para o R.U, Biblioteca Central, Teatro ou H.U e mostre-os na tela. Outra que mostre apenas uma saudação do dia após leitura do nome da pessoa. (QT9 - 0,25)
+````
+#include <stdio.h>
+
+void exibirMenu() {
+    printf("Menu:\n");
+    printf("1. R.U\n");
+    printf("2. Biblioteca Central\n");
+    printf("3. Teatro\n");
+    printf("4. H.U\n");
+}
+
+void exibirSaudacao(char nome[]) {
+    printf("Bom dia, %s!\n", nome);
+}
+
+int main() {
+    int opcao;
+    char nome[100];
+    
+    exibirMenu();
+    
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
+    
+    switch (opcao) {
+        case 1:
+            printf("Você escolheu R.U\n");
+            break;
+        case 2:
+            printf("Você escolheu Biblioteca Central\n");
+            break;
+        case 3:
+            printf("Você escolheu Teatro\n");
+            break;
+        case 4:
+            printf("Você escolheu H.U\n");
+            break;
+        default:
+            printf("Opção inválida\n");
+            break;
+    }
+    
+    printf("Digite seu nome: ");
+    scanf("%s", nome);
+    
+    exibirSaudacao(nome);
+    
+    return 0;
+}
 
 >	Declare funções para: Totalizar a quantidade de árvores em cada setor(CCHL, CCE, CT, CCN, DIE, CCS) da ufpi através de entrada de dados pelo teclado. Ao final mostrar o total de árvores na UFPI. (Q10 - 25).
+#include <stdio.h>
+
+int totalArvoresSetor(const char* setor) {
+    int totalArvores;
+    printf("Digite a quantidade de árvores no setor %s: ", setor);
+    scanf("%d", &totalArvores);
+    return totalArvores;
+}
+
+int main() {
+    int cchl, cce, ct, ccn, die, ccs;
+    int totalArvores;
+
+    cchl = totalArvoresSetor("CCHL");
+    cce = totalArvoresSetor("CCE");
+    ct = totalArvoresSetor("CT");
+    ccn = totalArvoresSetor("CCN");
+    die = totalArvoresSetor("DIE");
+    ccs = totalArvoresSetor("CCS");
+
+    totalArvores = cchl + cce + ct + ccn + die + ccs;
+
+    printf("\nTotal de árvores na UFPI:\n");
+    printf("CCHL: %d\n", cchl);
+    printf("CCE: %d\n", cce);
+    printf("CT: %d\n", ct);
+    printf("CCN: %d\n", ccn);
+    printf("DIE: %d\n", die);
+    printf("CCS: %d\n", ccs);
+    printf("Total geral: %d\n", totalArvores);
+
+    return 0;
+}
+
 
 # Vetores em C
 Declarar e preencher um vetor em C nos possibilita muitas utilizações. Observe a estrutura básica de um vetor em C.
@@ -32,7 +115,7 @@ int main()
 
 Para cada valor a partir da posição zero do vetor, temos um elemento. Cada posição é representada pelo símbolo de colchetes. Sempre iniciará da posição zero. Dessa forma, se o vetor de elementos tem 3 posições corresponderá às posições 0,1,2 (três elementos). A mesma ideia se aplica a qualquer quantidade de elementos.
 Quando essa quantidade é bem grande, usamos laços de repetição. Observe o código abaixo.
-````
+```
 #include <stdio.h>
 
 int main()
