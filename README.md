@@ -32,7 +32,27 @@ int main()
 
 Para cada valor a partir da posição zero do vetor, temos um elemento. Cada posição é representada pelo símbolo de colchetes. Sempre iniciará da posição zero. Dessa forma, se o vetor de elementos tem 3 posições corresponderá às posições 0,1,2 (três elementos). A mesma ideia se aplica a qualquer quantidade de elementos.
 Quando essa quantidade é bem grande, usamos laços de repetição. Observe o código abaixo.
+````
+#include <stdio.h>
 
+int main()
+{
+    int meuVetor[10];
+    
+    printf("Digite 10 valores inteiros:\n");
+    
+    for (int i = 0; i < 10; i++) {
+        printf("Valor %d: ", i + 1);
+        scanf("%d", &meuVetor[i]);
+    }
+    
+    printf("\nValores do vetor:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Valor na posição %d: %d\n", i, meuVetor[i]);
+    }
+    
+    return 0;
+}
 ```C
 #include <stdio.h>
 // Cada posição i do vetor é um valor multiplicado por 2. Usamos um for para preencher e outro for para mostrar.
@@ -51,6 +71,27 @@ int main()
 
 ```
 >	QT05 (0,25 pontos) - Altere o código acima para que seja lido diretamente do teclado um valor inteiro, ao invés de atribuído. Mostre todos os valores lidos ao final.
+```
+>#include <stdio.h>
+
+int main()
+{
+    int meuVetor[10];
+    
+    printf("Digite 10 valores inteiros:\n");
+    
+    for (int i = 0; i < 10; i++) {
+        printf("Valor %d: ", i + 1);
+        scanf("%d", &meuVetor[i]);
+    }
+    
+    printf("\nValores lidos:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Posição %d e valor => %d\n", i, meuVetor[i]);
+    }
+    
+    return 0;
+}
 
 Em algumas situações temos que impor condições para obter dados de tudo o que foi lido e armazenado em uma lista de vetores. Vejamos um exemplo no código abaixo:
 ```C
@@ -82,10 +123,127 @@ int main()
 }
 ```
 >	QT06 (0,5 - pontos) - Crie um código onde sejam lidos 20 votos. Os votos serão armazenados em um vetor inteiro de elementos. Cada número do voto corresponde a um time de futebol que será mostrado em um menu com 4 opções sendo elas: Flamengo, Vasco, São Paulo, Corinthians. Totalize os votos ao final e mostre na tela.
+```
+#include <stdio.h>
+
+int main()
+{
+    int votos[20];
+    int totalFlamengo = 0, totalVasco = 0, totalSaoPaulo = 0, totalCorinthians = 0;
+    int i;
+
+    printf("Digite os votos:\n");
+    for (i = 0; i < 20; i++) {
+        printf("Voto %d: ", i + 1);
+        scanf("%d", &votos[i]);
+
+        switch (votos[i]) {
+            case 1:
+                totalFlamengo++;
+                break;
+            case 2:
+                totalVasco++;
+                break;
+            case 3:
+                totalSaoPaulo++;
+                break;
+            case 4:
+                totalCorinthians++;
+                break;
+            default:
+                printf("Opção inválida!\n");
+                i--; // Repetir a leitura para o mesmo índice
+                break;
+        }
+    }
+
+    printf("\nResultado dos votos:\n");
+    printf("Flamengo: %d votos\n", totalFlamengo);
+    printf("Vasco: %d votos\n", totalVasco);
+    printf("São Paulo: %d votos\n", totalSaoPaulo);
+    printf("Corinthians: %d votos\n", totalCorinthians);
+
+    return 0;
+}
+   
+    
 
 >	QT07 (0,5 - pontos) - Refaça a mesma questão anterior utilizando o While e acrescentando uma condição de parada chamada "Totalizar" representada pelo número 99 no menu.
 
+#include <stdio.h>
+
+int main()
+{
+    int meuVetor[10];
+    int numero;
+    int pos = 0;
+    int neg = 0;
+    int totalizar = 0; // Condição de parada
+    
+    printf("Digite os valores do vetor (digite 99 para parar):\n");
+    
+    int i = 0;
+    while (i < 10 && totalizar != 99) {
+        printf("Valor %d: ", i + 1);
+        scanf("%d", &numero);
+        
+        if (numero == 99) {
+            totalizar = 99; // Definindo a condição de parada
+        } else {
+            meuVetor[i] = numero;
+            
+            if (meuVetor[i] > 0) {
+                pos++;
+            } else {
+                neg++;
+            }
+            
+            i++;
+        }
+    }
+    
+    printf("\nValores do vetor:\n");
+    for (int j = 0; j < i; j++) {
+        printf("Valor na posição %d: %d\n", j, meuVetor[j]);
+    }
+    
+    printf("\nTotal de valores positivos: %d\n", pos);
+    printf("Total de valores negativos: %d\n", neg);
+    
+    return 0;
+}
 >	QT08 (0,5 - pontos) - Crie um vetor de 20 posições para ler números correspondente ao estilo musical da turma (1 - Sertanejo, 2 - Internacional, 3 - Pop, 4 - Coreano, 5 - Forró, 6 - Funk, 7 - Gospel, 8 - Rock, 9 - Eletrônica, 10 - Classica). Totalize os votos por estilo e mostre ao final. Utilize o Do..while.
+#include <stdio.h>
+```
+int main()
+{
+    int estiloMusical[20];
+    int voto;
+    int totalEstilo[10] = {0}; // Vetor para armazenar a contagem de votos por estilo
+    int i = 0;
+    
+    printf("Digite os votos dos estilos musicais (1 a 10) [99 para parar]:\n");
+    
+    do {
+        printf("Voto %d: ", i + 1);
+        scanf("%d", &voto);
+        
+        if (voto >= 1 && voto <= 10) {
+            estiloMusical[i] = voto;
+            totalEstilo[voto - 1]++; // Incrementa a contagem de votos para o estilo correspondente
+            i++;
+        } else if (voto != 99) {
+            printf("Voto inválido! Digite novamente.\n");
+        }
+    } while (voto != 99 && i < 20);
+    
+    printf("\nTotal de votos por estilo musical:\n");
+    for (int j = 0; j < 10; j++) {
+        printf("Estilo %d: %d voto(s)\n", j + 1, totalEstilo[j]);
+    }
+    
+    return 0;
+}
 
 ## Revisando estrutura básica
 
