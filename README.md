@@ -58,6 +58,60 @@ int main(void)
 }
 ```
 >	QT11(0,25) - Crie estruturas novas e correlacione com sua realidade. Use estruturas de repetição e estruturas switch. Ao final, as fichas com os cadastros deverão ser apresentadas.
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ficha_de_aluno
+{
+  char nome[100];
+  char disciplina[100];
+  float nota_prova1;
+  float nota_prova2;
+};
+
+int main(void)
+{
+  int num_alunos;
+  
+  printf("Quantidade de alunos: ");
+  scanf("%d", &num_alunos);
+  
+  struct ficha_de_aluno alunos[num_alunos];
+  
+  for (int i = 0; i < num_alunos; i++)
+  {
+    printf("\n---------- Cadastro de aluno %d -----------\n\n", i+1);
+  
+    printf("Nome do aluno: ");
+    fflush(stdin);
+    fgets(alunos[i].nome, 100, stdin);
+  
+    printf("Disciplina: ");
+    fflush(stdin);
+    fgets(alunos[i].disciplina, 100, stdin);
+  
+    printf("Informe a 1a. nota: ");
+    scanf("%f", &alunos[i].nota_prova1);
+  
+    printf("Informe a 2a. nota: ");
+    scanf("%f", &alunos[i].nota_prova2);
+  }
+  
+  printf("\n\n --------- Mostrando os dados dos alunos ---------\n\n");
+  
+  for (int i = 0; i < num_alunos; i++)
+  {
+    printf("\n---------- Aluno %d -----------\n\n", i+1);
+    printf("Nome: %s", alunos[i].nome);
+    printf("Disciplina: %s", alunos[i].disciplina);
+    printf("Nota da Prova 1: %.2f\n", alunos[i].nota_prova1);
+    printf("Nota da Prova 2: %.2f\n", alunos[i].nota_prova2);
+  }
+
+  return 0;
+}
+
 >	QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
 
 # Funções em C
