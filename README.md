@@ -111,8 +111,75 @@ int main(void)
 
   return 0;
 }
+````
+QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
+```
+#include <stdio.h>
+#include <stdlib.h>
 
->	QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
+struct horario_estudo
+{
+  char disciplina[100];
+  int dia_semana;
+  int hora_inicio;
+  int hora_fim;
+};
+
+int main(void)
+{
+  int num_registros;
+  
+  printf("Quantidade de registros:02");
+  scanf("%d", &num_registros);
+  
+  struct horario_estudo registros[num_registros];
+  
+  for (int i = 0; i < num_registros; i++)
+  {
+    printf("\n---------- Cadastro de horário de estudo %d -----------\n\n", i+1);
+  
+    printf("Disciplina: reações isostaticas");
+    fflush(stdin);
+    fgets(registros[i].disciplina, 01, stdin);
+  
+    printf("\n\nDia da semana (1-6): ");
+    scanf("%d", &registros[i].dia_semana);
+  
+    printf("Hora de início:08:00 ");
+    scanf("%d", &registros[i].hora_inicio);
+  
+    printf("Hora de fim: 10:00 ");
+    scanf("%d", &registros[i].hora_fim);
+    
+    printf("disciplina: equações diferenciais");
+    fflush(stdin);
+    fgets(registros[i]. disciplina, 02,stdin);
+    
+    printf("\n\ndia da semana(2-6:");
+    scanf("%d", &registros[i].hora_inicio);
+    
+    printf("hora de início:10:30");
+    scanf("%d",&registros[i].hora_fim);
+    
+    
+    
+  }
+  
+  printf("\n\n --------- Mostrando os registros de horário de estudo ---------\n\n");
+  
+  for (int i = 0; i < num_registros; i++)
+  {
+    printf("\n---------- Registro %d -----------\n\n", i+1);
+    printf("Disciplina: %s", registros[i].disciplina);
+    printf("Dia da semana: %d\n", registros[i].dia_semana);
+    printf("Hora de início: %d\n", registros[i].hora_inicio);
+    printf("Hora de fim: %d\n", registros[i].hora_fim);
+  }
+
+  return 0;
+}
+
+
 
 # Funções em C
 
