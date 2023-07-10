@@ -83,18 +83,18 @@ int main(void)
   {
     printf("\n---------- Cadastro de aluno %d -----------\n\n", i+1);
   
-    printf("Nome do aluno: ");
+    printf("\n\nNome do aluno:Autran ");
     fflush(stdin);
     fgets(alunos[i].nome, 100, stdin);
   
-    printf("Disciplina: ");
+    printf("Disciplina: introdução a metodologia cientifica ");
     fflush(stdin);
     fgets(alunos[i].disciplina, 100, stdin);
   
-    printf("Informe a 1a. nota: ");
+    printf("Informe a 1a. nota: 10 ");
     scanf("%f", &alunos[i].nota_prova1);
   
-    printf("Informe a 2a. nota: ");
+    printf("Informe a 2a. nota: 10");
     scanf("%f", &alunos[i].nota_prova2);
   }
   
