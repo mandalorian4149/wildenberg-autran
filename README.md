@@ -182,8 +182,9 @@ int main(void)
 
 
 # Funções em C
+````
+Declare funções. Uma com opção de menu para o R.U, Biblioteca Central, Teatro ou H.U e mostre-os na tela. Outra que mostre apenas uma saudação do dia após leitura do nome da pessoa. (QT9 - 0,25)
 
->	Declare funções. Uma com opção de menu para o R.U, Biblioteca Central, Teatro ou H.U e mostre-os na tela. Outra que mostre apenas uma saudação do dia após leitura do nome da pessoa. (QT9 - 0,25)
 ````
 #include <stdio.h>
 
@@ -233,10 +234,11 @@ int main() {
     
     return 0;
 }
+````
+Declare funções para: Totalizar a quantidade de árvores em cada setor(CCHL, CCE, CT, CCN, DIE, CCS) da ufpi através de entrada de dados pelo teclado. Ao final mostrar o total de árvores na UFPI. (Q10 - 25).
 
->	Declare funções para: Totalizar a quantidade de árvores em cada setor(CCHL, CCE, CT, CCN, DIE, CCS) da ufpi através de entrada de dados pelo teclado. Ao final mostrar o total de árvores na UFPI. (Q10 - 25).
+````
 #include <stdio.h>
-
 int totalArvoresSetor(const char* setor) {
     int totalArvores;
     printf("Digite a quantidade de árvores no setor %s: ", setor);
@@ -271,9 +273,13 @@ int main() {
 
 
 # Vetores em C
+````
 Declarar e preencher um vetor em C nos possibilita muitas utilizações. Observe a estrutura básica de um vetor em C.
 Observe o código abaixo.
-```C
+
+
+
+```
 #include <stdio.h>
 
 int main()
@@ -428,11 +434,11 @@ int main()
 
     return 0;
 }
-   
+
     
-
->	QT07 (0,5 - pontos) - Refaça a mesma questão anterior utilizando o While e acrescentando uma condição de parada chamada "Totalizar" representada pelo número 99 no menu.
-
+````
+QT07 (0,5 - pontos) - Refaça a mesma questão anterior utilizando o While e acrescentando uma condição de parada chamada "Totalizar" representada pelo número 99 no menu.
+````
 #include <stdio.h>
 
 int main()
@@ -475,7 +481,8 @@ int main()
     
     return 0;
 }
->	QT08 (0,5 - pontos) - Crie um vetor de 20 posições para ler números correspondente ao estilo musical da turma (1 - Sertanejo, 2 - Internacional, 3 - Pop, 4 - Coreano, 5 - Forró, 6 - Funk, 7 - Gospel, 8 - Rock, 9 - Eletrônica, 10 - Classica). Totalize os votos por estilo e mostre ao final. Utilize o Do..while.
+````
+QT08 (0,5 - pontos) - Crie um vetor de 20 posições para ler números correspondente ao estilo musical da turma (1 - Sertanejo, 2 - Internacional, 3 - Pop, 4 - Coreano, 5 - Forró, 6 - Funk, 7 - Gospel, 8 - Rock, 9 - Eletrônica, 10 - Classica). Totalize os votos por estilo e mostre ao final. Utilize o Do..while.
 #include <stdio.h>
 ```
 int main()
@@ -511,7 +518,7 @@ int main()
 ## Revisando estrutura básica
 
 ##### Aqui você irá ver de novo e praticar a estrutura básica.
-
+````
 > Usando o compilador C online repassado para a turma {https://www.onlinegdb.com/online_c_compiler} reescreva o código abaixo:
 ```C
 #include<stdio.h>
@@ -520,7 +527,7 @@ int main(){
 	a = 20;
 	printf("o valor de a é: %d",a);
 }
-```
+
 Na estrutura básica temos:
 >	#include<stdio.h>
 >	int main()
@@ -530,7 +537,7 @@ Na estrutura básica temos:
 ## Revisando estrutura condicional.
 
 ##### Aqui você irá ver de novo e praticar as condicionais de C.
-
+````
 > Usando o compilador C online repassado para a turma {https://www.onlinegdb.com/online_c_compiler} reescreva o código abaixo:
 ```C
 #include <stdio.h>
