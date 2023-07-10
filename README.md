@@ -1,6 +1,65 @@
 # Aprendendo Programação em C
 #### Um jeito diferente de aprender programação.
 
+# Registros em C - Uma forma legal de criar uma "ficha" sobre alguma coisa.
+### Nos exemplos a seguir vamos ver códigos com Structs em C que representa um registro, ou seja, tipos diferentes de dados em uma mesma estrutura.
+#### Observe o código abaixo auto-explicativo e faça as questões seguintes.
+
+```C
+#include <stdio.h>
+#include <conio.h>
+int main(void)
+{
+  /*Criando a struct */
+  struct ficha_de_aluno
+  {
+    char nome[100];
+    char disciplina[100];
+    float nota_prova1;
+    float nota_prova2;
+  };
+  
+  /*Criando a variável aluno que será do
+  tipo struct ficha_de_aluno */
+  struct ficha_de_aluno aluno; //perceba que ficha_de_aluno é como se fosse um tipo. A vairável aluno está sendo criada com esse tipo.
+  
+  printf("\n---------- Cadastro de aluno -----------\n\n\n");
+  
+  printf("Nome do aluno ......: ");
+  fflush(stdin);
+  
+  /*usaremos o comando fgets() para ler strings, no caso o nome
+  do aluno e a disciplina.
+  fgets(variavel, tamanho da string, entrada)
+  como estamos lendo do teclado a entrada é stdin (entrada padrão),
+  porém em outro caso, a entrada tambem poderia ser um arquivo */
+  
+  fgets(aluno.nome, 40, stdin);
+  
+  printf("Disciplina ......: ");
+  fflush(stdin);
+  fgets(aluno.disciplina, 40, stdin);
+  
+  printf("Informe a 1a. nota ..: ");
+  
+  scanf("%f", &aluno.nota_prova1);
+  
+  printf("Informe a 2a. nota ..: ");
+  scanf("%f", &aluno.nota_prova2);
+  
+  printf("\n\n --------- Mostrando os dados da struct ---------\n\n");
+  printf("Nome ...........: %s", aluno.nome);
+  printf("Disciplina .....: %s", aluno.disciplina);
+  printf("Nota da Prova 1 ...: %.2f\n" , aluno.nota_prova1);
+  printf("Nota da Prova 2 ...: %.2f\n" , aluno.nota_prova2);
+  
+  getch();
+  return(0);
+}
+```
+>	QT11(0,25) - Crie estruturas novas e correlacione com sua realidade. Use estruturas de repetição e estruturas switch. Ao final, as fichas com os cadastros deverão ser apresentadas.
+>	QT12(0,25) - Crie estruturas em C para organizar alguma necessidade sua e realize o cadastro dos registros. Utilize estruturas de loop para realizar mais de um registro. Ao final, apresente todos os cadastros realizados. Justifique todo o seu código.
+
 # Funções em C
 
 >	Declare funções. Uma com opção de menu para o R.U, Biblioteca Central, Teatro ou H.U e mostre-os na tela. Outra que mostre apenas uma saudação do dia após leitura do nome da pessoa. (QT9 - 0,25)
