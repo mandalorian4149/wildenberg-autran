@@ -130,6 +130,7 @@ void cabecalho(){
     printf("\nUniversidade Federal do Piauí");
     printf("\nDepartamento de Tecnologia");
     printf("\nCurso de Engenharia Civil");
+    printf("\nWildenebrg autran rocha silva ramos - Lenda");
 }
 
 int questoes(){
@@ -145,7 +146,7 @@ int questoes(){
     printf("\n[9] - Vetores");
     printf("\n[10] - Registros");
     printf("\n[11] - Sair");
-    printf("\nQual questão você deseja fazer.: ");
+    printf("\n[12] - Dragon Ball.:");
     scanf("%d",&questao);
     return questao;
 }
@@ -169,22 +170,22 @@ void questao02(){
     int x;
     fflush(stdin);
     printf("\n\n qual dos seguintes cenários melhor ilustra a aplicação da lógica na computação?");
-    printf("\n\n[1] - determinar a solução para um problema matemático complexo");
-    printf("\n[2] - escolher a melhor estratégia de marketing para uma empresa");
+    printf("\n\n[1] - Determinar a solução para um problema matemático complexo");
+    printf("\n[2] - Escolher a melhor estratégia de marketing para uma empresa");
     printf("\n\nEscolha.: ");
     scanf("%d",&x);
     if (x==1){
 		printf("\nacertou. um ponto.");		
 	}else{
 		printf("\nmenos um ponto.");
-	}acertou. um ponto
+	}
 }
 void questao03(){
     int x;
     fflush(stdin);
     printf("\n\nqual é o elemento responsavel por incluir bibliotecas em programa em C?");
-    printf("\n[1] - inclusao de bibliotecas");
-    printf("\n[2] - funcao principal");
+    printf("\n[1] - Inclusao de bibliotecas");
+    printf("\n[2] - Funcao principal");
     printf("\n\nEscolha.: ");
     scanf("%d",&x);
     if (x==1){
@@ -199,8 +200,8 @@ void questao04(){
     int x;
     fflush(stdin);
     printf("\n\nqual ods seguintes conceitos esta relacionado à utilização de variaáveis na programaçaõ?");
-    printf("\n[1] - tomanda de decisao");
-    printf("\n[2] - armazenamento de dados");
+    printf("\n[1] - Tomanda de decisao");
+    printf("\n[2] - Armazenamento de dados");
     printf ("\n\nEscolha.: ");
     scanf("%d",&x);
     if(x==1){
@@ -214,14 +215,14 @@ void questao05(){
     int x;
     fflush(stdin);
     printf("\n\nqual é o tipo de dado condicional que permite armazenar multiplas opções ou alternativas de uma variavel?");
-    printf("\n[1] - string");
-    printf("\n[2] - enumeração");
+    printf("\n[1] - String");
+    printf("\n[2] - Enumeração");
     printf("\n\nEscolha.:");
     scanf("%d",&x);
     if(x==1){
 		printf("\nmenos um ponto.");
     }else{
-    	printf("\nacertou. um ponto");
+    	printf("\nacertou. um ponConjuntos de informações relacionadas que podem conter diferentes tipos de dados agrupados sob um único nome.to");
 	}
 }
 
@@ -229,8 +230,8 @@ void questao06(){
      int x;
      fflush(stdin);
      printf("\n\nqual é a função primária dos lacos de repetição na programação");
-     printf("\n[1] - repetir um conjunto de instruções um determinado número de vezes");
-     printf("\n[2] - permitir a seleção condicional des instruções a serem executados");
+     printf("\n[1] - Repetir um conjunto de instruções um determinado número de vezes");
+     printf("\n[2] - Permitir a seleção condicional des instruções a serem executados");
      printf("\n\nEscolha.:");
      scanf("%d",&x);
      if(x==1){
@@ -241,56 +242,142 @@ void questao06(){
 }
 
 void questao07(){
-    
+    int x;
+    fflush(stdin);
+    printf("\n\nqual a finalidade principal das funcões sem parâmetro na computação?");
+    printf("\n[1] - Mineração de dados");
+    printf("\n[2] - Modulação de dados"); 
+    printf("\n\nEscolha.:");
+    scanf("%d",&x);
+    if(x==1){
+    printf("\nmenos um ponto.");
+   }else{
+   	printf("\nacertou. um ponto");
+   }
 }
 
 void questao08(){
-    
+    int x;
+    fflush(stdin);
+    printf("\nqual a função dos parâmetros em uma função na computação?");
+    printf("\n[1] - Organizar a execução de tarefas");
+    printf("\n[2] - Enviar informações para a função" );
+    printf("\n\nEscolha.:");
+    scanf("%d",&x);
+    if(x==1){
+		printf("\nmenos um ponto.");
+	}else{
+		printf("\nacertou. um ponto");
+	}
 }
 
 void questao09(){
-    
+    int x;
+    fflush(stdin);
+    printf("\n O que são  vetores na programação?");
+    printf("\n[1] - Estruturas de controle de fluxo utilizadas para repetir a execução de um bloco de código");
+    printf("\n[2] - Estruturas de dados usadas para armazenar e organizar uma coleção de elementos do mesmo tipo em uma sequência contínua de memória.");
+    printf("\n\nEscolha.:");
+    scanf("%d",&x);
+    if(x==1){
+		printf("\nmenos um ponto");
+	}else{
+		printf("\nacertou. um ponto.");
+	}
 }
 void questao10(){
-    
+    int x;
+    fflush(stdin);
+    printf("\nO que são registros (structs) em programação?");
+    printf("\n[1] -  Estruturas de dados usadas para armazenar e organizar uma coleção de elementos do mesmo tipo em uma sequência contínua de memória.");
+    printf("\n[2] - Conjuntos de informações relacionadas que podem conter diferentes tipos de dados agrupados sob um único nome.");
+    printf("\n\nEscolha.:");
+    scanf("%d",&x);
+    if(x==1){
+		printf("\nmenos um ponto");
+	}else{
+		printf("\nacertou. um ponto.");
+	}
+}
+void questao12 (){
+	int x;
+	fflush(stdin);
+	printf("\nQual o ersonagem mais forte de Dragon Ball(sem levar em considerção fusões!)");
+	printf("\n[1] - Broly");
+	printf("\n[2] - Gohan");
+	printf("\n\nEscolha.:");
+	scanf("%d",&x);
+	if(x==1){
+		printf("\n quase! Broly é forte, mas o gohan é absurdo");
+	}else{
+		printf("\nacertou! você entende muito e sabe do poder oculto da lenda gohan");
+	}
 }
 int main() {
     int opc;
+
     cabecalho();
     printf("\n----------------------------------------------------------------------");
-    opc = questoes();
-    switch(opc){
-        case 1: {
-            questao01();break;
+
+    do {
+        opc = questoes();
+        
+        switch (opc) {
+            case 1: {
+                questao01();
+                break;
+            }
+            case 2: {
+                questao02();
+                break;
+            }
+            case 3: {
+                questao03();
+                break;
+            }
+            case 4: {
+                questao04();
+                break;
+            }
+            case 5: {
+                questao05();
+                break;
+            }
+            case 6: {
+                questao06();
+                break;
+            }
+            case 7: {
+                questao07();
+                break;
+            }
+            case 8: {
+                questao08();
+                break;
+            }
+            case 9: {
+                questao09();
+                break;
+            }
+            case 10: {
+                questao10();
+                break;
+            }
+            case 12: {
+                questao12();
+                break;
+            }
+            case 11: {
+                printf("\nSaindo do programa. Obrigado por jogar!\n");
+                break;
+            }
+            default: {
+                printf("\nOpção inválida. Tente novamente.\n");
+                break;
+            }
         }
-        case 2: {
-            questao02();break;
-        }
-        case 3:{
-            questao03();break;
-        }
-        case 4:{
-            questao04();break;
-        }
-        case 5:{
-            questao05();break;
-        }
-        case 6:{
-            questao06();break;
-        }
-        case 7:{
-            questao07();break;
-        }
-        case 8:{
-            questao08();break;
-        }
-        case 9:{
-            questao09();break;
-        }
-        case 10:{
-            questao10();break;
-        }
-    }
+    } while (opc != 11);
+
     return 0;
 }
 # Registros em C - Uma forma legal de criar uma "ficha" sobre alguma coisa.
