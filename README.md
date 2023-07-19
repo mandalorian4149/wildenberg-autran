@@ -1,6 +1,127 @@
 # Aprendendo Programação em C
 #### Um jeito diferente de aprender programação.
 
+## Atividade Planejada de Fixação
+
+>	(Desafio)Complete o código abaixo elaborando as questões das opções de menu apresentadas na função questoes(). Implemente o uso de um laço de repetição (loop) até que o estudante digite 11 (Sair). Cada questão tem sua propria função. A elaboração da questão fica a seu critério para cada assunto listado no menu de questões. Ao final, execute o código e veja se o programa roda perfeitamente. (1,5 - Um ponto e meio na nota 3).
+```C
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void cabecalho(){
+    printf("\nMinistério da Educação");
+    printf("\nUniversidade Federal do Piauí");
+    printf("\nDepartamento de Tecnologia");
+    printf("\nCurso de Engenharia Civil");
+}
+
+int questoes(){
+    int questao;
+    printf("\n[1] - Tecnologia");
+    printf("\n[2] - Lógica");
+    printf("\n[3] - Estrutura básica de C");
+    printf("\n[4] - Variaveis");
+    printf("\n[5] - Tipo de dados e condicionais");
+    printf("\n[6] - Laços de repetição");
+    printf("\n[7] - Funções sem parâmetros");
+    printf("\n[8] - Funções com parâmetros");
+    printf("\n[9] - Vetores");
+    printf("\n[10] - Registros");
+    printf("\n[11] - Sair");
+    printf("\nQual questão você deseja fazer.: ");
+    scanf("%d",&questao);
+    return questao;
+}
+
+void questao01(){
+    int x;
+    fflush(stdin);
+    printf("\n\nO que significa na sua opinião 'informática'?");
+    printf("\n[1] - Tecnologias de processamento em meio digital");
+    printf("\n[2] - Informação automática");
+    printf("\n\nEscolha.: ");
+    scanf("%d",&x);
+    if (x == 1){
+        printf("\nmenos um ponto.");
+    }else{
+        printf("\nacertou. Um ponto");
+    }
+}
+
+void questao02(){
+    
+}
+
+void questao03(){
+    
+}
+
+void questao04(){
+    
+}
+void questao05(){
+    
+}
+
+void questao06(){
+    
+}
+
+void questao07(){
+    
+}
+
+void questao08(){
+    
+}
+
+void questao09(){
+    
+}
+void questao10(){
+    
+}
+int main() {
+    int opc;
+    cabecalho();
+    printf("\n----------------------------------------------------------------------");
+    opc = questoes();
+    switch(opc){
+        case 1: {
+            questao01();break;
+        }
+        case 2: {
+            questao02();break;
+        }
+        case 3:{
+            questao03();break;
+        }
+        case 4:{
+            questao04();break;
+        }
+        case 5:{
+            questao05();break;
+        }
+        case 6:{
+            questao06();break;
+        }
+        case 7:{
+            questao07();break;
+        }
+        case 8:{
+            questao08();break;
+        }
+        case 9:{
+            questao09();break;
+        }
+        case 10:{
+            questao10();break;
+        }
+    }
+    return 0;
+}
+```
+
 # Registros em C - Uma forma legal de criar uma "ficha" sobre alguma coisa.
 ### Nos exemplos a seguir vamos ver códigos com Structs em C que representa um registro, ou seja, tipos diferentes de dados em uma mesma estrutura.
 #### Observe o código abaixo auto-explicativo e faça as questões seguintes.
